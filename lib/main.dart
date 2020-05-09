@@ -14,43 +14,21 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.green[100],
       ),
-      body: Center(
-//        // Icon Button
-//        child: IconButton(
-//          onPressed: (){},
-//          icon: Icon(Icons.alternate_email),
-//          color: Colors.amber,
-//        )
-//        // Raise button with icon
-//        child: RaisedButton.icon(
-//          onPressed: (){
-//            print("Button Pressed");
-//          },
-//          icon: Icon(
-//            Icons.wifi
-//          ),
-//          label: Text("Wifi Toggled"),
-//          color: Colors.amber,
-//        )
-//        // Icons
-//        child: Icon(
-//          Icons.wifi,
-//          color: Colors.blue,
-//          size: 300.0,
-//        )
-//        // Images (work for URL too [Image.network])
-//        child: Image.asset('assets/iloveyoupatric.jpg'),
-        // Body Texts
-        child: Text(
-          "Hello World!",style: TextStyle(
-          fontSize: 20.0,
-          fontWeight: FontWeight.bold,
-          letterSpacing: 2.0,
-          color: Colors.grey[600],
-          fontFamily: 'customFont',
-        ),
-        ),
+      body: Container(
+        // padding is inside the container
+        padding: EdgeInsets.fromLTRB(10.0, 20.0, 30, 40),
+        // margin is around the container
+        margin: EdgeInsets.all(30.0),
+        // padding: EdgeInsets.symmetric(horizontal: 30.0,vertical: 10.0),
+        color: Colors.grey[300],
+        child: Text("Hello World"),
       ),
+//      // Use Padding widget when you only want to pad stuff. Use container if
+//      // you want to use margin
+//      body: Padding(
+//        padding: EdgeInsets.all(30.0),
+//        child: Text("Hello World!")
+//      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {  },
         child: Text("Click"),
