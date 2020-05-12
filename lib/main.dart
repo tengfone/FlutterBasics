@@ -4,7 +4,15 @@ void main() => runApp(MaterialApp(
   home: IDCard(),
 ));
 
-class IDCard extends StatelessWidget {
+class IDCard extends StatefulWidget {
+  @override
+  _IDCardState createState() => _IDCardState();
+}
+
+class _IDCardState extends State<IDCard> {
+
+  int counter = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,6 +22,16 @@ class IDCard extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.grey[850],
         elevation: 0,
+      ),
+      // Increment Button
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          setState(() {
+            counter++;
+          });
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.grey[800],
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(30,40,30,0),
@@ -60,6 +78,25 @@ class IDCard extends StatelessWidget {
             SizedBox(height: 10.0),
             Text(
               "XXXX XXXX",
+              style: TextStyle(
+                color: Colors.amberAccent[100],
+                letterSpacing:  2.0,
+                fontFamily: 'customFont',
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 30.0),
+            Text(
+                "Counter",
+                style: TextStyle(
+                  color: Colors.grey,
+                  letterSpacing:  2.0,
+                )
+            ),
+            SizedBox(height: 10.0),
+            Text(
+              "$counter",
               style: TextStyle(
                 color: Colors.amberAccent[100],
                 letterSpacing:  2.0,

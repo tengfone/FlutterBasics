@@ -1,5 +1,3 @@
-# Sample Flutter ID Card App
-
-A new Flutter application.
+# Sample Flutter ID Card App with State Widget
 
 ![sample_app](./assets/sample_idcard.png)
