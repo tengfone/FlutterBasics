@@ -1,3 +1,3 @@
-# Sample Iteration
+# Cards
 
-![sample_app](./assets/iterate.png)
+![sample_app](./assets/cards.png)
